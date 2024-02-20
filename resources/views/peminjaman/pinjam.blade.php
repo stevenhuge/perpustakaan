@@ -13,11 +13,12 @@
         @foreach ($data as $row)
         <tr>
             <td> {{ $row->anggota->name }} </td>
-            <td> {{ $row->buku->name }} </td> 
+            <td> {{ $row->buku->name }} </td>
             <td> {{ $row->tanggal_pinjam }} </td>
             <td> {{ $row->tanggal_kembali }} </td>
-        </tr> 
-        @endforeach 
+            <td><a href="{{ route('pengembalian', $row->id ) }}" class="btn btn-info"><i class="fa fa-info-circle"></i>Dikembalikan</td>
+        </tr>
+        @endforeach
     </tbody>
 </table>
 @endsection

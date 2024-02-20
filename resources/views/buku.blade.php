@@ -31,6 +31,6 @@
 </table>
 
 <div>
-    <a class="d-flex align-items justify-content-end btn btn-success" href="{{ route('store-buku') }}">Tambah Data</a>
+    <a class="" href="/buku/add">Tambah Data</a>
 </div>
 @endsection

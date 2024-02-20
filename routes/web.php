@@ -5,6 +5,7 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\PengembalianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,7 @@ Route::get('/buku/delete/{id}', [BukuController::class, 'destroy'])->name('destr
 Route::get('/buku/{id}', [BukuController::class, 'edit'])->name('edit');
 Route::post('/buku/{id}', [BukuController::class, 'update'])->name('update');
 
-// anggota 
+// anggota
 Route::get('/anggota', [AnggotaController::class, 'index'])->name('anggota');
 Route::get('/anggota/add', [AnggotaController::class, 'create'])->name('create');
 Route::post('/anggota', [AnggotaController::class, 'store'])->name('store');
@@ -43,6 +44,9 @@ Route::post('/anggota/{id}', [AnggotaController::class, 'update'])->name('update
 Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman');
 Route::get('/peminjaman/add', [PeminjamanController::class, 'create'])->name('create');
 Route::post('/peminjaman', [PeminjamanController::class, 'store'])->name('store-peminjaman');
+
+Route::get('/pengembalian', [PengembalianController::class, 'index'])->name('list-pengembalian');
+Route::get('/pengembalian/{id}', [PengembalianController::class, 'store'])->name('pengembalian');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
