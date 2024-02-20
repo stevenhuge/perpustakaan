@@ -47,4 +47,5 @@ class BukuController extends Controller
         ]);
       return redirect()->route('buku');
     }
+
 }

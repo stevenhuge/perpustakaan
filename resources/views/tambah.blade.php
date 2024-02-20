@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<form action="{{ route('store') }}" class="d-flex align-items justify-content-center" method="POST">
+<form action="{{ route('store-buku') }}" class="d-flex align-items justify-content-center" method="POST">
     @csrf
     <div class="form-control mt-5" id="content">
         <table class="table table-bordered mt-2">
